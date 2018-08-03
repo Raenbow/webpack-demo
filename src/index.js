@@ -1,31 +1,7 @@
-import $ from 'jquery';
-import './style.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-$('#login').click(() => {
-    console.log('U CLICKITY CLACKED DAT BUTTON YO!');
-
-    import('./helpers').then(resp => {
-        console.log('Import Resp:', resp);
-
-        const { login, addToDom } = resp;
-
-        const result1 = login('SaltySuzy', 'zxcv');
-
-        const result2 = login('Rando', 'randomson');
-
-        addToDom('h1', result1, 'blue');
-        addToDom('h1', result2, 'purple');
-    })
-})
-
-$('#load-image').click( () => {
-    console.log('Load Img Clcked');
-
-    import('./helpers').then( resp => {
-        const { addImg } = resp;
-
-        import('./positivity.jpg').then( src => {
-            addImg(src.default);
-        })
-    })
-});
+ReactDOM.render(
+    <h1>Welcome to React!</h1>,
+    document.getElementById('root')
+);
